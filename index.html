@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Olga's Birthday Wishlist</title>
+  <meta name="description" content="A little collection of things I'd love. Reserve an item so no one else picks it twice." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/title-cursor-star.css" />
+</head>
+<body>
+  <div class="page" id="page">
+    <!-- HEADER -->
+    <div class="site-top">
+      <header class="site-header">
+        <a class="nav-brand" href="/">
+          <span class="nav-avatar-badge" aria-hidden="true">
+            <!-- Pixel star mark -->
+            <svg viewBox="0 0 16 16" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#111">
+                <rect x="7" y="1" width="2" height="2" />
+                <rect x="7" y="13" width="2" height="2" />
+                <rect x="1" y="7" width="2" height="2" />
+                <rect x="13" y="7" width="2" height="2" />
+                <rect x="3" y="3" width="2" height="2" />
+                <rect x="11" y="3" width="2" height="2" />
+                <rect x="3" y="11" width="2" height="2" />
+                <rect x="11" y="11" width="2" height="2" />
+                <rect x="6" y="6" width="4" height="4" />
+              </g>
+            </svg>
+          </span>
+          <span class="nav-name">Olga's Wishlist</span>
+        </a>
+        <div class="nav-actions">
+          <span class="nav-status" id="nav-status" aria-live="polite">Loading…</span>
+        </div>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero-area">
+      <div class="hero-block">
+        <div class="hero-card">
+          <h1>
+            <span class="hero-title-line hero-title-intro">Olga's Birthday</span>
+            <span class="hero-title-line hero-title-sub">Wishlist</span>
+          </h1>
+          <p class="hero-desc">
+            Thank you so much for asking a wishlist!
+          </p>
+          <div class="hero-note" role="note">
+            <span class="hero-note-dot" aria-hidden="true"></span>
+            <span>
+              Anyone can reserve or un-reserve (no accounts). If it says
+              <strong>Reserved</strong>, please pick something else — thank you 
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISHLIST GRID -->
+    <section class="wish-section" id="wishlist">
+      <div class="wish-header">
+        <span class="section-label">Wishlist · <span id="count-available">–</span> available</span>
+        <h2 class="wish-title">Just pick anything</h2>
+      </div>
+      <div class="wish-grid" id="wish-grid">
+        <!-- Cards get rendered by script.js -->
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-links">
+        <span id="sync-indicator" class="sync-indicator">Syncing live</span>
+      </span>
+    </footer>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Firebase (compat SDK — no build step required) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+  <script src="assets/title-cursor-star.js" defer></script>
+</body>
+</html>
