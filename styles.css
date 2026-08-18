@@ -326,6 +326,10 @@ h1 {
 .wish-media--icon {
   background: #f5f5f5;
 }
+.wish-media--theme-dark {
+  background: #111;
+  border-color: #111;
+}
 .wish-media img {
   display: block;
   width: 100%;

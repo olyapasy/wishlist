@@ -54,8 +54,8 @@ const ITEMS = [
   },
   {
     id: 'ring',
-    name: 'A silver ring',
-    note: 'To grow my ring collection. Size 15–16 mm.',
+    name: 'A Silver Ring',
+    note: 'To grow my ring collection. My size: 16 mm diameter · 56 EU · 7.5 US · O–P UK.',
     url: null,
     linkLabel: 'No link',
     icon: 'ring',
@@ -332,8 +332,9 @@ function renderCards() {
     const imgStyle = item.imagePosition
       ? ` style="object-position: ${item.imagePosition}"`
       : '';
+    const themeClass = item.mediaTheme ? ` wish-media--theme-${item.mediaTheme}` : '';
     const media = item.image
-      ? `<div class="wish-media wish-media--${item.imageFit || 'contain'}">
+      ? `<div class="wish-media wish-media--${item.imageFit || 'contain'}${themeClass}">
            <img src="${item.image}" alt="${item.name}" loading="lazy"${imgStyle} />
          </div>`
       : `<div class="wish-media wish-media--icon">${ICONS[item.icon] || ''}</div>`;
